@@ -1,0 +1,5 @@
+#ignore the token file
+access-token
+# ignore terraform state files
+*.tfstate
+*.tfstate.backup
