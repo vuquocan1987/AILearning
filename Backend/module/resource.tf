@@ -2,7 +2,7 @@
 resource "supabase_project" "production" {
   organization_id   = "nqatlhwzzhlgycreqsit"
   name              = "AI-backend"
-  database_password = "bk853f!S5@1234"
+  database_password = "placeholder because of lifecycle ignore changes"
   region            = "eu-north-1"
 
   lifecycle {
@@ -13,10 +13,10 @@ resource "supabase_project" "production" {
 resource "supabase_project" "staging" {
   organization_id   = "nqatlhwzzhlgycreqsit"
   name              = "AI-backend-staging"
-  database_password = "bk853f!S5@1234"
+  # set password to a tfvars in terraform cloud variable set
+  database_password = "placeholder because of lifecycle ignore changes"
   region            = "eu-north-1"
   lifecycle {
     ignore_changes = [database_password]
   }
 }
-
